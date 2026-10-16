@@ -1,0 +1,64 @@
+# Example: run the factory from GitHub Actions, started by a human (workflow_dispatch).
+# Copy this file into the TARGET repository (the one whose issues the factory should work), add a
+# factory.config.json there, and add the secret ANTHROPIC_API_KEY. The job opens pull requests;
+# it never merges. Only one run per repository at a time (see `concurrency`), which also keeps
+# GitHub label claims race-free.
+#
+# Repository settings needed: Settings > Actions > General > Workflow permissions >
+# "Allow GitHub Actions to create and approve pull requests" (the factory only CREATES them).
+name: software-factory
+
+on:
+  workflow_dispatch:
+    inputs:
+      issues:
+        description: "Issue numbers, comma-separated (empty = every open issue labelled 'factory')"
+        required: false
+      concurrency:
+        description: "Lanes"
+        required: false
+        default: "3"
+
+concurrency:
+  group: software-factory-${{ github.repository }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write       # push factory/* branches
+  pull-requests: write  # open pull requests
+  issues: write         # add the factory:claimed label
+
+jobs:
+  factory:
+    # This example lives in the skills repo; only run it from a target repository.
+    if: github.repository != 'dlmastery/software-factory-from-scratch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Claude Code and the factory skills
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          git clone --depth 1 https://github.com/dlmastery/software-factory-from-scratch "$RUNNER_TEMP/sf"
+      - name: Run the factory
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          LANES: ${{ inputs.concurrency }}
+          ISSUES: ${{ inputs.issues }}
+        run: |
+          gh auth setup-git   # the runner clones and pushes in fresh directories: give git the token
+          git config --global user.name factory-bot
+          git config --global user.email factory-bot@users.noreply.github.com
+          set -- run --yes --concurrency "$LANES"
+          if [ -n "$ISSUES" ]; then set -- "$@" --issues "$ISSUES"; fi
+          node "$RUNNER_TEMP/sf/skills/software-factory/scripts/factory.mjs" "$@"
+      - name: Upload the run ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: factory-ledger
+          path: .factory/runs/

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#2563EB"/></marker>
+    <marker id="a-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <rect x="54" y="152" width="212" height="246" rx="18" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <rect x="62" y="160" width="196" height="230" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="80" y="194" font-size="15" font-weight="600" fill="#2563EB" letter-spacing="1">STAGE 1</text>
+  <text x="80" y="226" font-size="22" font-weight="700" fill="#1F2937">Triage</text>
+  <text x="80" y="264" font-size="17" fill="#1F2937">Is the ticket</text>
+  <text x="80" y="289" font-size="17" fill="#1F2937">actionable?</text>
+  <rect x="74" y="328" width="172" height="32" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="160.0" y="349" font-size="15" font-weight="600" fill="#B45309" text-anchor="middle">Skipped 1 vague ticket</text>
+  <line x1="270" y1="275.0" x2="306" y2="275.0" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="160.0" y1="400" x2="160.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="62" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="80" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">JSON HANDOFF</text>
+  <text x="80" y="508" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">{</text>
+  <text x="80" y="530" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  actionable,</text>
+  <text x="80" y="552" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  kind,</text>
+  <text x="80" y="574" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  reason</text>
+  <text x="80" y="596" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">}</text>
+  <rect x="310" y="152" width="212" height="246" rx="18" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <rect x="318" y="160" width="196" height="230" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="336" y="194" font-size="15" font-weight="600" fill="#2563EB" letter-spacing="1">STAGE 2</text>
+  <text x="336" y="226" font-size="22" font-weight="700" fill="#1F2937">Worker</text>
+  <text x="336" y="264" font-size="17" fill="#1F2937">Writes the fix</text>
+  <text x="336" y="289" font-size="17" fill="#1F2937">and tests, then</text>
+  <text x="336" y="314" font-size="17" fill="#1F2937">pushes a branch</text>
+  <line x1="526" y1="275.0" x2="562" y2="275.0" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="416.0" y1="400" x2="416.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="318" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="336" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">JSON HANDOFF</text>
+  <text x="336" y="508" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">{</text>
+  <text x="336" y="530" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  status,</text>
+  <text x="336" y="552" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  summary,</text>
+  <text x="336" y="574" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  filesChanged,</text>
+  <text x="336" y="596" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  testsAdded,</text>
+  <text x="336" y="618" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  testsPass</text>
+  <text x="336" y="640" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">}</text>
+  <rect x="566" y="152" width="212" height="246" rx="18" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <rect x="574" y="160" width="196" height="230" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="592" y="194" font-size="15" font-weight="600" fill="#059669" letter-spacing="1">STAGE 3</text>
+  <text x="592" y="226" font-size="22" font-weight="700" fill="#1F2937">Verifier</text>
+  <text x="592" y="264" font-size="17" fill="#1F2937">Clean snapshot,</text>
+  <text x="592" y="289" font-size="17" fill="#1F2937">re-runs the full</text>
+  <text x="592" y="314" font-size="17" fill="#1F2937">test suite</text>
+  <line x1="782" y1="275.0" x2="818" y2="275.0" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="672.0" y1="400" x2="672.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="574" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="592" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">RESULT</text>
+  <text x="592" y="510" font-size="16" fill="#1F2937">Its own pass / fail.</text>
+  <text x="592" y="534" font-size="16" fill="#1F2937">Worker’s testsPass</text>
+  <text x="592" y="558" font-size="16" fill="#1F2937">is ignored.</text>
+  <rect x="822" y="152" width="212" height="246" rx="18" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <rect x="830" y="160" width="196" height="230" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="848" y="194" font-size="15" font-weight="600" fill="#059669" letter-spacing="1">STAGE 4</text>
+  <text x="848" y="226" font-size="22" font-weight="700" fill="#1F2937">Reviewer</text>
+  <text x="848" y="264" font-size="17" fill="#1F2937">Reads the git diff;</text>
+  <text x="848" y="289" font-size="17" fill="#1F2937">catches logic bugs</text>
+  <text x="848" y="314" font-size="17" fill="#1F2937">tests miss</text>
+  <line x1="1038" y1="275.0" x2="1074" y2="275.0" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="928.0" y1="400" x2="928.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="830" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="848" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">JSON HANDOFF</text>
+  <text x="848" y="508" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">{</text>
+  <text x="848" y="530" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  verdict,</text>
+  <text x="848" y="552" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">  issuesFound</text>
+  <text x="848" y="574" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace" xml:space="preserve">}</text>
+  <rect x="1078" y="152" width="212" height="246" rx="18" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <rect x="1086" y="160" width="196" height="230" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="1104" y="194" font-size="15" font-weight="600" fill="#2563EB" letter-spacing="1">STAGE 5</text>
+  <text x="1104" y="226" font-size="22" font-weight="700" fill="#1F2937">Integrator</text>
+  <text x="1104" y="264" font-size="17" fill="#1F2937">Merges approved</text>
+  <text x="1104" y="289" font-size="17" fill="#1F2937">PRs one by one,</text>
+  <text x="1104" y="314" font-size="17" fill="#1F2937">resolves conflicts</text>
+  <line x1="1294" y1="275.0" x2="1330" y2="275.0" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+  <line x1="1184.0" y1="400" x2="1184.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="1086" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="1104" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">RESULT</text>
+  <text x="1104" y="510" font-size="16" fill="#1F2937">One branch with</text>
+  <text x="1104" y="534" font-size="16" fill="#1F2937">all approved PRs,</text>
+  <text x="1104" y="558" font-size="16" fill="#1F2937">suite re-run</text>
+  <text x="1104" y="582" font-size="16" fill="#1F2937">after each merge.</text>
+  <rect x="1342" y="160" width="196" height="230" rx="14" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+  <text x="1360" y="194" font-size="15" font-weight="600" fill="#1F2937" letter-spacing="1">STAGE 6</text>
+  <text x="1360" y="226" font-size="22" font-weight="700" fill="#1F2937">Human</text>
+  <text x="1360" y="264" font-size="17" fill="#1F2937">Reviews the</text>
+  <text x="1360" y="289" font-size="17" fill="#1F2937">integrated branch</text>
+  <text x="1360" y="314" font-size="17" fill="#1F2937">and merges</text>
+  <line x1="1440.0" y1="400" x2="1440.0" y2="450" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <rect x="1342" y="450" width="196" height="210" rx="12" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="1360" y="480" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">RULE</text>
+  <text x="1360" y="510" font-size="16" fill="#1F2937">The factory opens</text>
+  <text x="1360" y="534" font-size="16" fill="#1F2937">PRs; it never</text>
+  <text x="1360" y="558" font-size="16" fill="#1F2937">presses merge.</text>
+  <rect x="62" y="716" width="1476" height="1.5" fill="#E5E7EB"/>
+  <rect x="62" y="750" width="44" height="30" rx="8" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="120" y="771" font-size="17" fill="#1F2937">fresh sandbox per stage</text>
+  <rect x="360" y="750" width="44" height="30" rx="8" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="418" y="771" font-size="17" fill="#1F2937">typed output read by the next stage</text>
+  <rect x="736" y="750" width="44" height="30" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="794" y="771" font-size="17" fill="#1F2937">independent check</text>
+  <text x="62" y="830" font-size="17" fill="#6B7280" font-style="italic">Like an assembly line: every station works in its own clean bay and passes a standard work ticket to the next.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <text x="60" y="148" font-size="19" font-weight="600" fill="#1F2937">Open issues</text>
+  <text x="60" y="172" font-size="16" fill="#6B7280">tinylinks backlog</text>
+  <rect x="370" y="130" width="656" height="42" rx="8" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="1040" y="158" font-size="20" font-weight="700" fill="#1F2937">10</text>
+  <text x="60" y="230" font-size="19" font-weight="600" fill="#1F2937">Actionable after triage</text>
+  <text x="60" y="254" font-size="16" fill="#6B7280">1 triaged out: vague #10</text>
+  <rect x="370" y="212" width="590" height="42" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="964" y="212" width="62" height="42" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="995.0" y="239" font-size="16" font-weight="600" fill="#B45309" text-anchor="middle">#10</text>
+  <text x="1040" y="240" font-size="20" font-weight="700" fill="#1F2937">9 <tspan font-size="16" font-weight="600" fill="#B45309">+1 out</tspan></text>
+  <text x="60" y="312" font-size="19" font-weight="600" fill="#1F2937">PRs opened</text>
+  <text x="60" y="336" font-size="16" fill="#6B7280">one per actionable issue</text>
+  <rect x="370" y="294" width="590" height="42" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="974" y="322" font-size="20" font-weight="700" fill="#1F2937">9</text>
+  <text x="60" y="394" font-size="19" font-weight="600" fill="#1F2937">Passed verifier + reviewer</text>
+  <text x="60" y="418" font-size="16" fill="#6B7280">both independent gates</text>
+  <rect x="370" y="376" width="590" height="42" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="974" y="404" font-size="20" font-weight="700" fill="#1F2937">9 / 9</text>
+  <text x="60" y="476" font-size="19" font-weight="600" fill="#1F2937">Passed hidden tests</text>
+  <text x="60" y="500" font-size="16" fill="#6B7280">tests the agents never saw</text>
+  <rect x="370" y="458" width="590" height="42" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="974" y="486" font-size="20" font-weight="700" fill="#1F2937">9 / 9</text>
+  <text x="60" y="558" font-size="19" font-weight="600" fill="#1F2937">Conflicted when merged</text>
+  <text x="60" y="582" font-size="16" fill="#6B7280">shared test file, same snapshot</text>
+  <rect x="370" y="540" width="458" height="42" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="599.0" y="567" font-size="16" font-weight="600" fill="#B45309" text-anchor="middle">7 conflicted</text>
+  <rect x="832" y="540" width="128" height="42" rx="8" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="896.0" y="567" font-size="16" font-weight="600" fill="#6B7280" text-anchor="middle">2 clean</text>
+  <text x="974" y="568" font-size="20" font-weight="700" fill="#1F2937">7 of 9</text>
+  <text x="60" y="640" font-size="19" font-weight="600" fill="#1F2937">Integrated on one branch</text>
+  <text x="60" y="664" font-size="16" fill="#6B7280">integrator, one PR at a time</text>
+  <rect x="370" y="622" width="590" height="42" rx="8" fill="#059669" stroke="#059669" stroke-width="1.5"/>
+  <text x="665.0" y="649" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">24 tests pass</text>
+  <text x="974" y="650" font-size="20" font-weight="700" fill="#1F2937">9</text>
+  <rect x="1220" y="120" width="320" height="572" rx="14" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="1246" y="158" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">THE RUN</text>
+  <text x="1246" y="204" font-size="34" font-weight="700" fill="#1F2937">4 min 34 s</text>
+  <text x="1246" y="230" font-size="16" fill="#6B7280">wall clock for all 10 issues</text>
+  <text x="1246" y="282" font-size="34" font-weight="700" fill="#1F2937">5 lanes</text>
+  <text x="1246" y="308" font-size="16" fill="#6B7280">running at a time</text>
+  <line x1="1246" y1="338" x2="1514" y2="338" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="1246" y="372" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">COST</text>
+  <rect x="1246" y="388" width="98" height="24" rx="4" fill="#2563EB"/>
+  <rect x="1346" y="388" width="164" height="24" rx="4" fill="#93C5FD"/>
+  <rect x="1512" y="388" width="3" height="24" fill="#059669"/>
+  <rect x="1246" y="440" width="14" height="14" rx="3" fill="#2563EB"/>
+  <text x="1272" y="454" font-size="20" font-weight="700" fill="#1F2937">$3.67 <tspan font-size="17" font-weight="400">factory run</tspan></text>
+  <text x="1272" y="478" font-size="15" fill="#6B7280">Claude Code, Sonnet 5</text>
+  <rect x="1246" y="504" width="14" height="14" rx="3" fill="#93C5FD"/>
+  <text x="1272" y="518" font-size="20" font-weight="700" fill="#1F2937">$6.37 <tspan font-size="17" font-weight="400">integrator</tspan></text>
+  <text x="1272" y="542" font-size="15" fill="#6B7280">sequential conflict resolution</text>
+  <rect x="1246" y="568" width="14" height="14" rx="3" fill="#059669"/>
+  <text x="1272" y="582" font-size="20" font-weight="700" fill="#1F2937">~$0.01 <tspan font-size="17" font-weight="400">Box compute</tspan></text>
+  <text x="1272" y="606" font-size="15" fill="#6B7280">Upstash Box sandboxes</text>
+  <line x1="1246" y1="630" x2="1514" y2="630" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="1246" y="664" font-size="18" font-weight="700" fill="#1F2937">≈ $10.05 total</text>
+  <line x1="60" y1="738" x2="1540" y2="738" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="60" y="790" font-size="17" fill="#6B7280" font-style="italic">Plant log: 10 work orders in, 1 sent back as unclear, 9 parts inspected twice and assembled on one line before the foreman signs off.</text>
+</svg>

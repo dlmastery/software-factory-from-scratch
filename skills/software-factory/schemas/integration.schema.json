@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntegrationResult",
+  "description": "Handoff from the integrator agent after it resolves one merge conflict.",
+  "type": "object",
+  "properties": {
+    "resolved": {
+      "type": "boolean",
+      "description": "true when no conflict markers remain and both sides' behavior and tests are kept"
+    },
+    "testsPass": {
+      "type": "boolean",
+      "description": "did the test command pass after resolving (self-reported; the runner re-runs it)"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["resolved", "testsPass", "summary"],
+  "additionalProperties": false
+}

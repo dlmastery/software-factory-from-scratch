@@ -1,0 +1,6 @@
+node_modules/
+.factory/
+/factory-lab/
+/*-factory/
+hidden-test/
+.DS_Store

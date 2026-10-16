@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review",
+  "description": "Handoff from the reviewer stage. The reviewer did not write the change and may not modify files.",
+  "type": "object",
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["approve", "request_changes"]
+    },
+    "issuesFound": {
+      "type": "array",
+      "description": "Concrete problems, each with file and line when possible. Empty when approving.",
+      "items": { "type": "string" }
+    },
+    "riskNotes": {
+      "type": "string",
+      "description": "Anything a human merger should know even when approving (edge cases not covered, follow-ups)."
+    }
+  },
+  "required": ["verdict", "issuesFound", "riskNotes"],
+  "additionalProperties": false
+}

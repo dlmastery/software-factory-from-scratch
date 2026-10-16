@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#2563EB"/></marker>
+    <marker id="a-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <path d="M 662.5 727.2 A 335 335 0 0 1 325.0 731.6" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+  <path d="M 210.6 624.9 A 335 335 0 0 1 209.0 257.5" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+  <path d="M 317.5 152.8 A 335 335 0 0 1 771.0 622.5" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+  <rect x="619" y="637" width="216" height="80" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="727" y="671" font-size="19" font-weight="700" fill="#1F2937" text-anchor="middle">Traces</text>
+  <text x="727" y="695" font-size="15" fill="#6B7280" text-anchor="middle">from every run</text>
+  <rect x="145" y="637" width="216" height="80" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="253" y="671" font-size="19" font-weight="700" fill="#1F2937" text-anchor="middle">Find patterns</text>
+  <text x="253" y="695" font-size="15" fill="#6B7280" text-anchor="middle">what failed, where, why</text>
+  <rect x="145" y="163" width="216" height="80" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="253" y="197" font-size="19" font-weight="700" fill="#1F2937" text-anchor="middle">Update the factory</text>
+  <text x="253" y="221" font-size="15" fill="#6B7280" text-anchor="middle">skills · prompts · routing</text>
+  <path d="M 592.3 301.7 A 172 172 0 0 1 656.5 396.9" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <path d="M 657.6 478.7 A 172 172 0 0 1 597.1 574.6" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <path d="M 387.7 578.3 A 172 172 0 0 1 323.5 483.1" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <path d="M 322.4 401.3 A 172 172 0 0 1 382.9 305.4" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <rect x="398" y="240" width="184" height="56" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="490" y="274" font-size="18" font-weight="700" fill="#1F2937" text-anchor="middle">GitHub issue</text>
+  <rect x="570" y="412" width="184" height="56" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="662" y="446" font-size="18" font-weight="700" fill="#1F2937" text-anchor="middle">Isolated agent</text>
+  <rect x="398" y="584" width="184" height="56" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="490" y="618" font-size="18" font-weight="700" fill="#1F2937" text-anchor="middle">Independent check</text>
+  <rect x="226" y="412" width="184" height="56" rx="12" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+  <text x="318" y="446" font-size="18" font-weight="700" fill="#1F2937" text-anchor="middle">Human merge</text>
+  <text x="490" y="434" font-size="15" font-weight="600" fill="#2563EB" text-anchor="middle" letter-spacing="1">INNER LOOP</text>
+  <text x="490" y="458" font-size="16" fill="#6B7280" text-anchor="middle">the factory</text>
+  <text x="786" y="150" font-size="15" font-weight="600" fill="#059669" letter-spacing="1">OUTER LOOP</text>
+  <text x="786" y="174" font-size="16" fill="#6B7280">improves the next run</text>
+  <text x="60" y="842" font-size="17" fill="#6B7280" font-style="italic">Like a plant manager who reads every shift log and rewrites the work instructions.</text>
+  <rect x="980" y="110" width="560" height="116" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="1004" y="148" font-size="20" font-weight="700" fill="#1F2937">Pays off at volume</text>
+  <text x="1004" y="178" font-size="17" fill="#1F2937">For a high-volume backlog,</text>
+  <text x="1004" y="203" font-size="17" fill="#6B7280">not for a one-off fix.</text>
+  <rect x="980" y="246" width="560" height="116" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1004" y="284" font-size="20" font-weight="700" fill="#1F2937">Quality comes from the gates</text>
+  <text x="1004" y="314" font-size="17" fill="#1F2937">Existing test suite + reviewer attention;</text>
+  <text x="1004" y="339" font-size="17" fill="#6B7280">autonomy does not replace them.</text>
+  <rect x="980" y="382" width="560" height="116" rx="12" fill="#F9FAFB" stroke="#1F2937" stroke-width="1.5"/>
+  <text x="1004" y="420" font-size="20" font-weight="700" fill="#1F2937">Auditable by design</text>
+  <text x="1004" y="450" font-size="17" fill="#1F2937">Fresh sandbox per stage +</text>
+  <text x="1004" y="475" font-size="17" fill="#6B7280">human-only merge.</text>
+  <rect x="980" y="518" width="560" height="116" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="1004" y="556" font-size="20" font-weight="700" fill="#1F2937">Self-improving</text>
+  <text x="1004" y="586" font-size="17" fill="#1F2937">Traces from every run update skills,</text>
+  <text x="1004" y="611" font-size="17" fill="#6B7280">prompts and routing rules.</text>
+  <rect x="980" y="670" width="560" height="140" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="1004" y="704" font-size="14" font-weight="600" fill="#2563EB" letter-spacing="1">THE ESSENTIAL PATTERN</text>
+  <text x="1004" y="740" font-size="18" font-weight="600" fill="#1F2937">issue → isolated agent → independent check</text>
+  <text x="1004" y="766" font-size="18" font-weight="600" fill="#1F2937">→ human merge</text>
+  <text x="1004" y="794" font-size="16" fill="#6B7280">independent of model or sandbox vendor</text>
+</svg>

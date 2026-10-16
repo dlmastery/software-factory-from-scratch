@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#2563EB"/></marker>
+    <marker id="a-gray" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#9CA3AF"/></marker>
+    <marker id="a-amber" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#D97706"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <!-- left chain: repo -> base box -> snapshot -->
+  <rect x="60" y="356" width="170" height="100" rx="12" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="80" y="398" font-size="20" font-weight="700" fill="#1F2937">tinylinks</text>
+  <text x="80" y="424" font-size="16" fill="#6B7280">GitHub repo</text>
+  <line x1="232" y1="406" x2="286" y2="406" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+
+  <rect x="290" y="326" width="230" height="160" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="312" y="364" font-size="20" font-weight="700" fill="#1F2937">Base box</text>
+  <text x="312" y="398" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace">git clone</text>
+  <text x="312" y="424" font-size="16" fill="#1F2937" font-family="Consolas, 'Cascadia Mono', monospace">npm install</text>
+  <text x="312" y="460" font-size="16" fill="#6B7280">set up once</text>
+  <line x1="522" y1="406" x2="566" y2="406" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+
+  <rect x="570" y="356" width="170" height="100" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="576" y="362" width="158" height="88" rx="8" fill="#EFF6FF"/>
+  <text x="590" y="396" font-size="20" font-weight="700" fill="#1F2937">Snapshot</text>
+  <text x="590" y="422" font-size="16" fill="#6B7280">repo + deps,</text>
+  <text x="590" y="442" font-size="16" fill="#6B7280">frozen</text>
+
+  <!-- features -->
+  <text x="60" y="560" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">BOX FEATURES USED</text>
+  <g font-size="16" fill="#1F2937" text-anchor="middle">
+    <rect x="60" y="576" width="170" height="38" rx="10" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/><text x="145" y="601">fast boot</text>
+    <rect x="246" y="576" width="170" height="38" rx="10" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/><text x="331" y="601">snapshot</text>
+    <rect x="60" y="626" width="170" height="38" rx="10" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/><text x="145" y="651">pause / resume</text>
+    <rect x="246" y="626" width="170" height="38" rx="10" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/><text x="331" y="651">egress allowlist</text>
+  </g>
+
+  <!-- fan-out -->
+  <g stroke="#2563EB" stroke-width="2" fill="none" marker-end="url(#a-blue)">
+    <path d="M 742 406 C 785 406, 785 194, 826 194"/>
+    <path d="M 742 406 C 785 406, 785 300, 826 300"/>
+    <line x1="742" y1="406" x2="826" y2="406"/>
+    <path d="M 742 406 C 785 406, 785 512, 826 512"/>
+    <path d="M 742 406 C 785 406, 785 618, 826 618"/>
+  </g>
+  <text x="655" y="486" font-size="15" fill="#6B7280" text-anchor="middle">each stage boots</text>
+  <text x="655" y="506" font-size="15" fill="#6B7280" text-anchor="middle">its own box</text>
+
+  <!-- untrusted region -->
+  <rect x="804" y="100" width="356" height="600" rx="16" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="830" y="132" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">INSIDE THE BOXES · UNTRUSTED</text>
+
+  <g>
+    <rect x="830" y="150" width="300" height="88" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="852" y="188" font-size="19" font-weight="700" fill="#1F2937">Triage</text>
+    <text x="852" y="214" font-size="16" fill="#6B7280">from snapshot</text>
+
+    <rect x="830" y="256" width="300" height="88" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="852" y="294" font-size="19" font-weight="700" fill="#1F2937">Worker</text>
+    <text x="852" y="320" font-size="16" fill="#6B7280">from snapshot</text>
+    <rect x="968" y="282" width="148" height="34" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="1042" y="305" font-size="15" fill="#1F2937" text-anchor="middle" font-family="Consolas, 'Cascadia Mono', monospace">docs "question"</text>
+
+    <rect x="830" y="362" width="300" height="88" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="852" y="400" font-size="19" font-weight="700" fill="#1F2937">Verifier</text>
+    <text x="852" y="426" font-size="16" fill="#6B7280">from snapshot</text>
+
+    <rect x="830" y="468" width="300" height="88" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="852" y="506" font-size="19" font-weight="700" fill="#1F2937">Reviewer</text>
+    <text x="852" y="532" font-size="16" fill="#6B7280">from snapshot</text>
+
+    <rect x="830" y="574" width="300" height="88" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="852" y="612" font-size="19" font-weight="700" fill="#1F2937">Integrator</text>
+    <text x="852" y="638" font-size="16" fill="#6B7280">from snapshot</text>
+  </g>
+
+  <!-- trusted host side -->
+  <text x="1210" y="132" font-size="14" font-weight="600" fill="#6B7280" letter-spacing="1">OUTSIDE · TRUSTED HOST</text>
+  <line x1="1118" y1="290" x2="1206" y2="290" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="1208" y1="318" x2="1120" y2="318" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a-gray)"/>
+
+  <rect x="1210" y="236" width="330" height="140" rx="12" fill="#F9FAFB" stroke="#1F2937" stroke-width="1.5"/>
+  <text x="1232" y="274" font-size="19" font-weight="700" fill="#1F2937">Egress allowlist + proxy</text>
+  <text x="1232" y="304" font-size="16" fill="#1F2937">attaches the Context7 API key</text>
+  <text x="1232" y="328" font-size="16" fill="#1F2937">to outbound requests</text>
+  <rect x="1232" y="342" width="146" height="24" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+  <text x="1305" y="359" font-size="14" font-weight="600" fill="#B45309" text-anchor="middle">key lives here</text>
+
+  <line x1="1360" y1="378" x2="1360" y2="438" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+  <line x1="1400" y1="440" x2="1400" y2="380" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a-gray)"/>
+  <text x="1348" y="414" font-size="15" fill="#6B7280" text-anchor="end">request + key</text>
+  <text x="1412" y="414" font-size="15" fill="#6B7280">docs</text>
+
+  <rect x="1210" y="442" width="330" height="96" rx="12" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="1232" y="482" font-size="19" font-weight="700" fill="#1F2937">Context7 API</text>
+  <text x="1232" y="510" font-size="16" fill="#6B7280">current library documentation</text>
+
+  <rect x="1210" y="578" width="330" height="84" rx="12" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="1232" y="614" font-size="17" font-weight="600" fill="#1F2937">The key never enters the</text>
+  <text x="1232" y="640" font-size="17" font-weight="600" fill="#1F2937">untrusted environment</text>
+
+  <!-- bottom: cost + analogy -->
+  <line x1="60" y1="744" x2="1540" y2="744" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="60" y="812" font-size="44" font-weight="700" fill="#059669">~$0.01</text>
+  <text x="236" y="796" font-size="19" font-weight="600" fill="#1F2937">Box compute for the whole day</text>
+  <text x="236" y="822" font-size="16" fill="#6B7280">Most wall-clock time is spent waiting on the model, not on sandboxes.</text>
+  <text x="1540" y="796" font-size="17" fill="#6B7280" font-style="italic" text-anchor="end">Private workshops: each machinist works behind</text>
+  <text x="1540" y="822" font-size="17" fill="#6B7280" font-style="italic" text-anchor="end">a closed door; the plant collects the output.</text>
+</svg>

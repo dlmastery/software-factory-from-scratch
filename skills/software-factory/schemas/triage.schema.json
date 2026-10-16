@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triage",
+  "description": "Handoff from the triage stage. Decides whether an issue is clear enough for an unattended agent to build.",
+  "type": "object",
+  "properties": {
+    "actionable": {
+      "type": "boolean",
+      "description": "true only if the issue states a concrete, testable outcome that can be built without asking anyone"
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["bug", "feature", "chore", "unclear"]
+    },
+    "reason": {
+      "type": "string",
+      "description": "One sentence explaining the decision. For non-actionable issues, say what is missing.",
+      "minLength": 1
+    },
+    "acceptanceCriteria": {
+      "type": "array",
+      "description": "The concrete, testable outcomes the worker must deliver. Empty when not actionable.",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["actionable", "kind", "reason", "acceptanceCriteria"],
+  "additionalProperties": false
+}

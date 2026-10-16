@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#2563EB"/></marker>
+    <marker id="a-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#059669"/></marker>
+    <marker id="a-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#DC2626"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <g transform="translate(0,40)">
+
+  <!-- source PR -->
+  <rect x="60" y="170" width="180" height="140" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="80" y="210" font-size="20" font-weight="700" fill="#1F2937">Worker’s PR</text>
+  <text x="80" y="242" font-size="16" fill="#6B7280">self-report:</text>
+  <text x="80" y="266" font-size="16" fill="#6B7280">“tests passed”</text>
+  <text x="80" y="292" font-size="15" fill="#6B7280" font-style="italic">not trusted</text>
+  <line x1="242" y1="240" x2="286" y2="240" stroke="#2563EB" stroke-width="2" marker-end="url(#a-blue)"/>
+
+  <!-- gate 1 -->
+  <rect x="290" y="140" width="280" height="208" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="312" y="174" font-size="15" font-weight="600" fill="#059669" letter-spacing="1">GATE 1</text>
+  <text x="312" y="206" font-size="22" font-weight="700" fill="#1F2937">Verifier</text>
+  <text x="312" y="238" font-size="17" fill="#1F2937">Fresh snapshot,</text>
+  <text x="312" y="262" font-size="17" fill="#1F2937">re-runs the full suite</text>
+  <line x1="312" y1="282" x2="548" y2="282" stroke="#A7F3D0" stroke-width="1.5"/>
+  <text x="312" y="310" font-size="15" fill="#6B7280">catches a false</text>
+  <text x="312" y="328" font-size="15" fill="#6B7280">“tests passed”</text>
+  <line x1="572" y1="240" x2="626" y2="240" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+
+  <!-- gate 2 -->
+  <rect x="630" y="140" width="280" height="208" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="652" y="174" font-size="15" font-weight="600" fill="#059669" letter-spacing="1">GATE 2</text>
+  <text x="652" y="206" font-size="22" font-weight="700" fill="#1F2937">Reviewer</text>
+  <text x="652" y="238" font-size="17" fill="#1F2937">Reads the diff against</text>
+  <text x="652" y="262" font-size="17" fill="#1F2937">what the issue asked</text>
+  <line x1="652" y1="282" x2="888" y2="282" stroke="#A7F3D0" stroke-width="1.5"/>
+  <text x="652" y="310" font-size="15" fill="#6B7280">catches logic bugs</text>
+  <text x="652" y="328" font-size="15" fill="#6B7280">that tests miss</text>
+  <line x1="912" y1="240" x2="966" y2="240" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+
+  <!-- gate 3 -->
+  <rect x="970" y="140" width="280" height="208" rx="12" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+  <text x="992" y="174" font-size="15" font-weight="600" fill="#1F2937" letter-spacing="1">GATE 3</text>
+  <text x="992" y="206" font-size="22" font-weight="700" fill="#1F2937">Human</text>
+  <text x="992" y="238" font-size="17" fill="#1F2937">The only party that</text>
+  <text x="992" y="262" font-size="17" fill="#1F2937">may merge</text>
+  <line x1="992" y1="282" x2="1228" y2="282" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="992" y="310" font-size="15" fill="#6B7280">the factory opens PRs,</text>
+  <text x="992" y="328" font-size="15" fill="#6B7280">never presses merge</text>
+  <line x1="1252" y1="240" x2="1306" y2="240" stroke="#059669" stroke-width="2" marker-end="url(#a-green)"/>
+
+  <!-- merged -->
+  <rect x="1310" y="190" width="230" height="100" rx="12" fill="#059669"/>
+  <text x="1425" y="234" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">Merged</text>
+  <text x="1425" y="262" font-size="16" fill="#ECFDF5" text-anchor="middle">into main</text>
+
+  <!-- gate 1 reject -->
+  <line x1="430" y1="350" x2="430" y2="398" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a-red)"/>
+  <text x="444" y="386" font-size="15" fill="#DC2626">fail: back to worker</text>
+
+  <!-- gate 2 reject to case study -->
+  <line x1="770" y1="350" x2="770" y2="440" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a-red)"/>
+  <text x="784" y="398" font-size="15" fill="#DC2626">rejected #8</text>
+
+  <!-- case study panel -->
+  <rect x="290" y="444" width="960" height="270" rx="14" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="316" y="480" font-size="15" font-weight="600" fill="#DC2626" letter-spacing="1">REHEARSAL · ISSUE #8 PAGINATION</text>
+
+  <g font-size="16">
+    <rect x="316" y="500" width="214" height="44" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <text x="423" y="528" fill="#065F46" text-anchor="middle">&#x2713;  Worker’s tests</text>
+    <rect x="546" y="500" width="214" height="44" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <text x="653" y="528" fill="#065F46" text-anchor="middle">&#x2713;  Verifier npm test</text>
+    <rect x="776" y="500" width="214" height="44" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+    <text x="883" y="528" fill="#065F46" text-anchor="middle">&#x2713;  Hidden test</text>
+    <rect x="1006" y="500" width="218" height="44" rx="10" fill="#DC2626"/>
+    <text x="1115" y="528" fill="#FFFFFF" font-weight="700" text-anchor="middle">&#x2717;  Reviewer: reject</text>
+  </g>
+
+  <text x="316" y="592" font-size="18" fill="#1F2937"><tspan font-weight="700">The bug:</tspan>&#160;links created in the same millisecond came back in</text>
+  <text x="316" y="618" font-size="18" fill="#1F2937">alphabetical order instead of creation order.</text>
+  <text x="316" y="660" font-size="18" fill="#1F2937"><tspan font-weight="700">Why every test passed:</tspan>&#160;the test data was already sorted, which hid it.</text>
+  <text x="316" y="692" font-size="16" fill="#6B7280">Three green test runs; only reading the diff caught it.</text>
+
+  <!-- analogy -->
+  <text x="1310" y="480" font-size="15" font-weight="600" fill="#6B7280" letter-spacing="1">IN THE PLANT</text>
+  <text x="1310" y="512" font-size="17" fill="#1F2937" font-style="italic">Three inspection</text>
+  <text x="1310" y="536" font-size="17" fill="#1F2937" font-style="italic">stations in series.</text>
+  <text x="1310" y="568" font-size="17" fill="#6B7280" font-style="italic">The machinist’s own</text>
+  <text x="1310" y="592" font-size="17" fill="#6B7280" font-style="italic">word never counts</text>
+  <text x="1310" y="616" font-size="17" fill="#6B7280" font-style="italic">as an inspection.</text>
+  </g>
+</svg>

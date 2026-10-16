@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WorkReport",
+  "description": "Handoff from the worker stage. This is a self-report: the verifier never trusts testsPass, it re-runs the suite itself.",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["done", "blocked"],
+      "description": "blocked when the issue cannot be resolved as written"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Two or three sentences a human reviewer can read in the pull request",
+      "minLength": 1
+    },
+    "filesChanged": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "testsAdded": {
+      "type": "boolean",
+      "description": "true if new or updated tests prove the change"
+    },
+    "testsPass": {
+      "type": "boolean",
+      "description": "did the test command pass after your change (self-reported)"
+    },
+    "blockedReason": {
+      "type": "string",
+      "description": "Why the work is blocked. Empty string when status is done."
+    }
+  },
+  "required": ["status", "summary", "filesChanged", "testsAdded", "testsPass", "blockedReason"],
+  "additionalProperties": false
+}

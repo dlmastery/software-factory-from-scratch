@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "labels": ["bug"],
+    "title": "Random slugs can collide and overwrite existing links",
+    "body": "`POST /links` asks `randomSlug()` for a slug but never checks whether that slug is already taken. When the generator repeats itself, the new link silently replaces the old one, so an existing short URL starts pointing somewhere else.\n\nExpected: creating a link must never overwrite an existing one. If the generated slug is taken, keep asking `randomSlug()` until it returns a free slug. The generator is injectable (`createApp({ randomSlug })`), so a test can force a collision."
+  },
+  {
+    "id": 2,
+    "labels": ["bug", "security"],
+    "title": "URLs without an http(s) scheme are accepted",
+    "body": "`POST /links` with `{\"url\": \"example.com\"}` returns 201, and the redirect then sends `Location: example.com`, which browsers treat as a relative path. Worse, `javascript:alert(1)` is accepted too.\n\nExpected: only absolute `http:` and `https:` URLs are accepted. Anything else (no scheme, `javascript:`, `ftp:`, `data:`, `file:`) returns 400 with `{\"error\": \"invalid url\"}`."
+  },
+  {
+    "id": 3,
+    "labels": ["bug"],
+    "title": "GET /stats/:slug returns 500 for an unknown slug",
+    "body": "Requesting stats for a slug that does not exist crashes the handler and returns 500.\n\nExpected: 404 with `{\"error\": \"not found\"}`, the same response the redirect route gives for an unknown slug."
+  },
+  {
+    "id": 4,
+    "labels": ["bug"],
+    "title": "HEAD requests are counted as clicks",
+    "body": "Link previewers and uptime checkers send `HEAD` requests, and every one of them increments the click counter.\n\nExpected: `HEAD /:slug` still answers 302 with the `Location` header, but it does not count as a click. Only `GET` counts."
+  },
+  {
+    "id": 5,
+    "labels": ["feature"],
+    "title": "Support custom slugs",
+    "body": "Let callers choose their slug: `POST /links` with `{\"url\": \"...\", \"slug\": \"my-launch\"}`.\n\n- A custom slug must match `^[a-z0-9-]{3,32}$`; otherwise return 400 with `{\"error\": \"invalid slug\"}`.\n- If the slug is already taken, return 409 with `{\"error\": \"slug taken\"}` and leave the existing link untouched.\n- Without `slug`, keep generating a random one as today.\n- The response is the usual `201 { slug, url, shortUrl }`."
+  },
+  {
+    "id": 6,
+    "labels": ["feature"],
+    "title": "Links that expire",
+    "body": "Accept an optional `expiresInSeconds` on `POST /links`. It must be a positive integer; anything else returns 400 with `{\"error\": \"invalid expiresInSeconds\"}`.\n\nOnce the link is `expiresInSeconds` seconds old, `GET /:slug` returns 410 with `{\"error\": \"expired\"}` instead of redirecting, and that visit is not counted as a click. Links without the field never expire. Use the injectable clock (`createApp({ now })`) for all time checks so tests can move time forward."
+  },
+  {
+    "id": 7,
+    "labels": ["feature"],
+    "title": "Delete a link",
+    "body": "Add `DELETE /links/:slug`.\n\n- 204 with an empty body when the link existed.\n- 404 with `{\"error\": \"not found\"}` otherwise.\n- After deletion, `GET /:slug` and `GET /stats/:slug` both return 404."
+  },
+  {
+    "id": 8,
+    "labels": ["feature"],
+    "title": "List links with cursor pagination",
+    "body": "Add `GET /links`, which returns `{\"items\": [...], \"nextCursor\": string | null}`. Each item is `{ slug, url, clicks, createdAt }`.\n\n- Items come back in creation order, oldest first.\n- `?limit=` sets the page size: default 20, maximum 100. A limit above 100 is treated as 100; a limit that is not a positive integer returns 400 with `{\"error\": \"invalid limit\"}`.\n- `?cursor=` takes the `nextCursor` from the previous page. The last page has `nextCursor: null`.\n- Walking every page returns every link exactly once."
+  },
+  {
+    "id": 9,
+    "labels": ["feature"],
+    "title": "Rate limit link creation per client",
+    "body": "One client can create unlimited links. Limit `POST /links` to 10 requests per minute per client IP address (the socket's remote address).\n\n- The 11th request inside a 60-second window returns 429 with `{\"error\": \"rate limited\"}` and a `retry-after` header holding the whole number of seconds until the window frees up.\n- Redirects, stats and every other route are not rate limited.\n- The limiter state belongs to one app instance (`createApp()` call) and uses the injectable clock (`createApp({ now })`)."
+  },
+  {
+    "id": 10,
+    "labels": ["enhancement"],
+    "title": "Make the stats better",
+    "body": "The stats are kind of useless right now. Can we make them better? Maybe more data, maybe a dashboard, not sure. Would be nice."
+  }
+]

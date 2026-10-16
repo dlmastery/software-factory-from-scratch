@@ -1,0 +1,17 @@
+{
+  "name": "software-factory-from-scratch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A software factory built only from Claude Code skills, with a complete codelab.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec \"test/*.test.mjs\"",
+    "test:unit": "node --test \"test/units.test.mjs\"",
+    "test:practice": "cd codelab/practice-app && npm test",
+    "check:hidden": "node codelab/instructor/check-hidden-tests.mjs"
+  },
+  "license": "MIT"
+}

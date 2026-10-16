@@ -1,0 +1,12 @@
+{
+  "name": "shortlinks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A tiny URL shortener used as the practice target for the software-factory codelab.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test --test-reporter=spec \"test/**/*.test.js\""
+  }
+}

@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Practice app tests
+        run: npm run test:practice
+      - name: Hidden tests are real (fail on start) and solvable (pass on reference)
+        run: npm run check:hidden
+      - name: Factory unit tests and fake-agent end-to-end runs
+        run: npm test

@@ -1,0 +1,20 @@
+{
+  "name": "software-factory",
+  "version": "1.0.0",
+  "description": "A software factory built only from Claude Code skills: GitHub issues in, verified and reviewed pull requests out. Claim, triage, worker, verifier, reviewer and integrator stages, each in its own sandbox; a human merges.",
+  "author": {
+    "name": "dlmastery"
+  },
+  "homepage": "https://github.com/dlmastery/software-factory-from-scratch",
+  "repository": "https://github.com/dlmastery/software-factory-from-scratch",
+  "license": "MIT",
+  "keywords": [
+    "software-factory",
+    "agents",
+    "claude-code",
+    "skills",
+    "ci",
+    "code-review",
+    "codelab"
+  ]
+}

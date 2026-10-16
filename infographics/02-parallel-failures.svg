@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-gray" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#9CA3AF"/></marker>
+    <marker id="a-amber" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#D97706"/></marker>
+    <marker id="a-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#DC2626"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <!-- Repo with 10 issues -->
+  <rect x="60" y="150" width="270" height="500" rx="14" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="84" y="190" font-size="22" font-weight="700" fill="#1F2937">tinylinks</text>
+  <text x="84" y="216" font-size="16" fill="#6B7280">small URL-shortener repo</text>
+  <text x="84" y="240" font-size="16" fill="#6B7280">10 open issues</text>
+  <g font-size="17" fill="#1F2937" text-anchor="middle">
+    <rect x="84" y="268" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="134" y="296">#1</text>
+    <rect x="206" y="268" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="256" y="296">#2</text>
+    <rect x="84" y="342" width="100" height="44" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/><text x="134" y="370" fill="#B45309" font-weight="700">#3</text>
+    <rect x="206" y="342" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="256" y="370">#4</text>
+    <rect x="84" y="416" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="134" y="444">#5</text>
+    <rect x="206" y="416" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="256" y="444">#6</text>
+    <rect x="84" y="490" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="134" y="518">#7</text>
+    <rect x="206" y="490" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="256" y="518">#8</text>
+    <rect x="84" y="564" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="134" y="592">#9</text>
+    <rect x="206" y="564" width="100" height="44" rx="10" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/><text x="256" y="592">#10</text>
+  </g>
+
+  <!-- repo -> agents -->
+  <g stroke="#9CA3AF" stroke-width="1.5" fill="none" marker-end="url(#a-gray)">
+    <line x1="332" y1="232" x2="416" y2="232"/>
+    <line x1="332" y1="332" x2="416" y2="332"/>
+    <line x1="332" y1="432" x2="416" y2="432"/>
+    <line x1="332" y1="532" x2="416" y2="532"/>
+  </g>
+  <text x="520" y="178" font-size="15" font-weight="600" fill="#6B7280" text-anchor="middle" letter-spacing="1">ALL AT ONCE</text>
+
+  <!-- agents -->
+  <g>
+    <rect x="420" y="198" width="200" height="68" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="440" y="228" font-size="19" font-weight="700" fill="#1F2937">Agent 1</text>
+    <text x="440" y="252" font-size="16" fill="#6B7280">working on #1</text>
+    <rect x="420" y="298" width="200" height="68" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="440" y="328" font-size="19" font-weight="700" fill="#1F2937">Agent 2</text>
+    <text x="440" y="352" font-size="16" fill="#B45309" font-weight="600">working on #3</text>
+    <rect x="420" y="398" width="200" height="68" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="440" y="428" font-size="19" font-weight="700" fill="#1F2937">Agent 3</text>
+    <text x="440" y="452" font-size="16" fill="#B45309" font-weight="600">working on #3</text>
+    <rect x="420" y="498" width="200" height="68" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="440" y="528" font-size="19" font-weight="700" fill="#1F2937">Agent 4</text>
+    <text x="440" y="552" font-size="16" fill="#6B7280">working on #7</text>
+  </g>
+
+  <!-- agents -> shared folder -->
+  <g stroke="#D97706" stroke-width="2" fill="none" marker-end="url(#a-amber)">
+    <path d="M 622 232 C 660 232, 660 350, 696 352"/>
+    <path d="M 622 332 C 660 332, 660 372, 696 372"/>
+    <path d="M 622 432 C 660 432, 660 392, 696 392"/>
+    <path d="M 622 532 C 660 532, 660 412, 696 412"/>
+  </g>
+
+  <!-- shared folder -->
+  <path d="M 700 296 L 700 470 Q 700 482 712 482 L 898 482 Q 910 482 910 470 L 910 324 Q 910 312 898 312 L 790 312 L 772 294 L 712 294 Q 700 294 700 306 Z" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+  <text x="805" y="368" font-size="20" font-weight="700" fill="#1F2937" text-anchor="middle">One shared</text>
+  <text x="805" y="394" font-size="20" font-weight="700" fill="#1F2937" text-anchor="middle">folder</text>
+  <text x="805" y="428" font-size="16" fill="#6B7280" text-anchor="middle">same files, same</text>
+  <text x="805" y="450" font-size="16" fill="#6B7280" text-anchor="middle">git working tree</text>
+
+  <text x="805" y="530" font-size="16" fill="#6B7280" text-anchor="middle" font-style="italic">Like four machinists</text>
+  <text x="805" y="552" font-size="16" fill="#6B7280" text-anchor="middle" font-style="italic">sharing one workbench</text>
+
+  <!-- folder -> failures -->
+  <g stroke="#DC2626" stroke-width="2" fill="none" marker-end="url(#a-red)">
+    <path d="M 912 360 C 960 360, 960 209, 1006 209"/>
+    <path d="M 912 380 C 960 380, 960 349, 1006 349"/>
+    <path d="M 912 400 C 960 400, 960 489, 1006 489"/>
+    <path d="M 912 420 C 960 420, 960 629, 1006 629"/>
+  </g>
+
+  <!-- failure cards -->
+  <g>
+    <rect x="1010" y="150" width="530" height="118" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+    <circle cx="1050" cy="209" r="17" fill="#DC2626"/><text x="1050" y="215" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">A</text>
+    <text x="1084" y="192" font-size="20" font-weight="700" fill="#1F2937">Files overwritten</text>
+    <text x="1084" y="220" font-size="17" fill="#1F2937">Agents edit the same files;</text>
+    <text x="1084" y="245" font-size="17" fill="#6B7280">last write wins, work is silently lost</text>
+
+    <rect x="1010" y="290" width="530" height="118" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+    <circle cx="1050" cy="349" r="17" fill="#DC2626"/><text x="1050" y="355" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">B</text>
+    <text x="1084" y="332" font-size="20" font-weight="700" fill="#1F2937">Same issue picked twice</text>
+    <text x="1084" y="360" font-size="17" fill="#1F2937">Agents 2 and 3 both take #3;</text>
+    <text x="1084" y="385" font-size="17" fill="#6B7280">duplicate effort, duplicate PRs</text>
+
+    <rect x="1010" y="430" width="530" height="118" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+    <circle cx="1050" cy="489" r="17" fill="#DC2626"/><text x="1050" y="495" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">C</text>
+    <text x="1084" y="472" font-size="20" font-weight="700" fill="#1F2937">False “tests passed”</text>
+    <text x="1084" y="500" font-size="17" fill="#1F2937">The agent grades its own work;</text>
+    <text x="1084" y="525" font-size="17" fill="#6B7280">an independent test run fails</text>
+
+    <rect x="1010" y="570" width="530" height="118" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+    <circle cx="1050" cy="629" r="17" fill="#DC2626"/><text x="1050" y="635" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">D</text>
+    <text x="1084" y="612" font-size="20" font-weight="700" fill="#1F2937">Flood of conflicting PRs</text>
+    <text x="1084" y="640" font-size="17" fill="#1F2937">Every PR touches shared code;</text>
+    <text x="1084" y="665" font-size="17" fill="#6B7280">the human is left to untangle them</text>
+  </g>
+
+  <!-- takeaway -->
+  <rect x="300" y="752" width="1000" height="68" rx="12" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="800" y="793" font-size="19" fill="#1F2937" text-anchor="middle">Without isolation and external checks, <tspan font-weight="700" fill="#DC2626">scale multiplies collisions</tspan>.</text>
+</svg>
